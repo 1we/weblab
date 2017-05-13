@@ -1,0 +1,25 @@
+<html>
+<title>THE SQR 1b</title>
+<script type=text/javascript>
+function sqr(num){
+	var num = prompt("Enter Number!","");
+	if(num>0 && num!==null)
+	{
+		msgstr="number and its sqare\n";
+			
+		for(i=1;i<=num;i++)
+		{
+			//msgstr=msgstr + i + "--" + i * i + "\n";
+			msgstr = msgstr + i*i + "\n";
+		}
+		
+		alert(msgstr);
+	}
+else
+alert("no proper input");
+	
+}
+</script>
+<body onload="sqr()">
+</body>
+</html>
