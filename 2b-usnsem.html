@@ -1,0 +1,49 @@
+<html>
+<title>USN JS</title>
+<script type=text/javascript>
+function validateUsn(elem1,elem2){
+
+	var alpaExp = /^[0-9][a-zA-Z][a-zA-Z][0-9][0-9][a-zA-Z][a-zA-Z][0-9][0-9][0-9]$/;
+	var semExp = /^[1-8]$/;
+	//var str = elem1.value;
+	if(!elem1.value.match(alpaExp)&& !elem2.value.match(semExp) )
+	{
+		alert("invalid USN and SEM");
+		return false;
+	}
+	
+	else if (!elem1.value.match(alpaExp)&& elem2.value.match(semExp) )
+	{
+		alert("invalid USN valid Sem");
+		return false;
+	
+	
+	}
+	else if (elem1.value.match(alpaExp)&& !elem2.value.match(semExp) )
+	{
+		alert("valid USN invalid Sem");
+		return false;
+	
+	
+	}
+	
+	
+	else
+	{
+	
+		alert("valid USN sem");
+		return true;
+	
+	
+	}
+}
+
+</script>
+<body>
+<form>
+<input type = "text" id="usn" />
+<input type = "text" id="sem">
+<input type = "submit" onclick = "validateUsn (document.getElementById('usn'),document.getElementById('sem'))" value = "cf"/>
+</form>
+</body>
+</html>
